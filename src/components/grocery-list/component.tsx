@@ -5,10 +5,10 @@ type GroceryItemProps = {
 };
 
 type GroceryListProps = {
-  items: GroceryItemProps[];
+  items: string[];
 };
 
-const GroceryItem = ({ item }: GroceryItemProps) => (
+const Item = ({ item }: GroceryItemProps) => (
   <div className="grocery-item">
     <input type="checkbox" name={item} id={item} />
     <label htmlFor={item}>{item}</label>
@@ -18,9 +18,9 @@ const GroceryItem = ({ item }: GroceryItemProps) => (
 export const GroceryList = ({ items }: GroceryListProps) => {
   return (
     <ul className="grocery-list">
-      {items.map(({ item }: GroceryItemProps, i: number) => (
+      {items.map((item: string, i: number) => (
         <li key={`${item}-${i}`}>
-          <GroceryItem item={item} />
+          <Item item={item} />
         </li>
       ))}
     </ul>
