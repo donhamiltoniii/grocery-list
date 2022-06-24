@@ -6,4 +6,5 @@ export const groceries: string[] = [
   "soft cheese?",
   "saltines",
   "ice cream",
+  "heating pad",
 ];
